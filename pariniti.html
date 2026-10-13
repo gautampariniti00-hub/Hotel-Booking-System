@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grand Horizon Resort</title>
+    <link rel="stylesheet" href="nitisha.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Grand Horizon</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#rooms">Rooms</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Pariniti Luxury Beyond Compare</h1>
+            <p>Book your stay at our award-winning resort today.</p>
+            
+            <form id="booking-form" class="booking-form">
+                <div class="form-group">
+                    <label for="check-in">Check-In</label>
+                    <input type="date" id="check-in" required>
+                </div>
+                <div class="form-group">
+                    <label for="check-out">Check-Out</label>
+                    <input type="date" id="check-out" required>
+                </div>
+                <div class="form-group">
+                    <label for="guests">Guests</label>
+                    <select id="guests">
+                        <option value="1">1 Guest</option>
+                        <option value="2" selected>2 Guests</option>
+                        <option value="3">3 Guests</option>
+                        <option value="4">4+ Guests</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-search">Check Availability</button>
+            </form>
+            <div id="booking-message"></div>
+        </div>
+    </section>
+
+    <section id="rooms" class="rooms-section">
+        <h2>Our Featured Rooms</h2>
+        
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All Rooms</button>
+            <button class="filter-btn" data-filter="luxury">Luxury</button>
+            <button class="filter-btn" data-filter="suite">Suites</button>
+        </div>
+
+        <div class="rooms-grid">
+            <div class="room-card" data-category="luxury">
+                <div class="room-image" style="background-image: url('https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=500&q=80');"></div>
+                <div class="room-info">
+                    <h3>Deluxe Ocean View</h3>
+                    <p>Wake up to beautiful ocean breezes and stunning panoramic views.</p>
+                    <span class="price">RS.250 / night</span>
+                    <button class="btn-book">Book Now</button>
+                </div>
+            </div>
+
+            <div class="room-card" data-category="suite">
+                <div class="room-image" style="background-image: url('https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=500&q=80');"></div>
+                <div class="room-info">
+                    <h3>Executive Penthouse Suite</h3>
+                    <p>The pinnacle of luxury featuring a private terrace and personal butler service.</p>
+                    <span class="price">RS.550 / night</span>
+                    <button class="btn-book">Book Now</button>
+                </div>
+            </div>
+
+            <div class="room-card" data-category="luxury">
+                <div class="room-image" style="background-image: url('https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=500&q=80');"></div>
+                <div class="room-info">
+                    <h3>Premium King Room</h3>
+                    <p>Perfect for business or leisure travelers seeking extra comfort.</p>
+                    <span class="price">RS.190 / night</span>
+                    <button class="btn-book">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <p>&copy; 2026 Grand Horizon Resort. All rights reserved.</p>
+    </footer>
+
+    <button id ="btn-book">Book Now</button>
+    <!-- Popup Booking Form HTML -->
+<div class="modal-overlay" id="bookingModal">
+    <div class="modal-box">
+        <span class="close-form-btn" id="closeFormBtn">&times;</span>
+        <h3 class="form-title">Booking Form</h3>
+        <form id="resortBookingForm">
+            <div class="input-field">
+                <label for="userName">Name</label>
+                <input type="text" id="userName" placeholder="Enter your name" required>
+            </div>
+            <div class="input-field">
+                <label for="userPhone">Phone Number</label>
+                <input type="tel" id="userPhone" placeholder="Enter your phone number" required>
+            </div>
+            <button type="submit" class="submit-form-btn">Confirm Booking</button>
+        </form>
+    </div>
+</div>   
+
+ <script src="nitisha.js"></script>
+</body>
+</html>
+   
